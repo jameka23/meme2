@@ -27,7 +27,7 @@
             </objects>
             <point key="canvasLocation" x="-3222" y="-542"/>
         </scene>
-        <!--Root View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="KTK-ia-LGo">
             <objects>
                 <tableViewController id="yda-2D-w0u" sceneMemberID="viewController">
@@ -50,11 +50,11 @@
                             <outlet property="delegate" destination="yda-2D-w0u" id="gxA-lY-IzO"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="kMM-pn-hsl"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="kMM-pn-hsl"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="J1p-xM-QrE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1154" y="-935"/>
+            <point key="canvasLocation" x="-1129" y="11"/>
         </scene>
         <!--Table-->
         <scene sceneID="ORy-Ou-ID0">
@@ -71,7 +71,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gSz-aa-LWJ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2151" y="-935"/>
+            <point key="canvasLocation" x="-2142" y="11"/>
         </scene>
         <!--Collection-->
         <scene sceneID="rBT-6o-EXG">
@@ -88,9 +88,9 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FnW-1J-V3T" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2180" y="11"/>
+            <point key="canvasLocation" x="-2235" y="-895"/>
         </scene>
-        <!--Sent Memes Collection View Controller-->
+        <!--Sent Memes-->
         <scene sceneID="K2A-xt-TC2">
             <objects>
                 <collectionViewController id="j0C-mt-AA1" customClass="SentMemesCollectionViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
@@ -128,14 +128,14 @@
                             <outlet property="delegate" destination="j0C-mt-AA1" id="b8O-QZ-Rqb"/>
                         </connections>
                     </collectionView>
-                    <navigationItem key="navigationItem" id="1GM-dX-Q7Z"/>
+                    <navigationItem key="navigationItem" title="Sent Memes" id="UPW-tY-Tvs"/>
                     <connections>
                         <outlet property="flowLayout" destination="LTi-90-gCp" id="IBs-kA-wyT"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBv-FS-GgO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1155" y="11"/>
+            <point key="canvasLocation" x="-1100" y="-895"/>
         </scene>
         <!--Meme Editor View Controller-->
         <scene sceneID="hXb-0P-nDM">
