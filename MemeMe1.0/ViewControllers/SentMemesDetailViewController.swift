@@ -9,10 +9,14 @@ import UIKit
 
 class SentMemesDetailViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    var meme: Meme!
+    
+    @IBOutlet weak var detailImageView: UIImageView!
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(true)
+        
+        
     }
      
 
