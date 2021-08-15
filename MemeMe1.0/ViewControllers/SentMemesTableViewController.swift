@@ -29,7 +29,7 @@ class SentMemesTableViewController: UITableViewController {
 
     
     @objc func AddNewMeme(){
-        performSegue(withIdentifier: "AddNewMemeSegue", sender: self)
+        performSegue(withIdentifier: "MemeEditorViewController", sender: self)
     }
     // MARK: - Table view data source
 
