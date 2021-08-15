@@ -134,7 +134,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
                 
                 // add to the array in AppDelegate
                 (UIApplication.shared.delegate as! AppDelegate).memes.append(self.meme)
-                
+                print("Saved the meme!")
                 self.dismiss(animated: true, completion: nil)
             }else{
                 print("cancelled")
