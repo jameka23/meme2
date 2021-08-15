@@ -7,7 +7,7 @@
 
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "MemeCollectionViewCell"
 
 class SentMemesCollectionViewController: UICollectionViewController {
 
@@ -27,6 +27,9 @@ class SentMemesCollectionViewController: UICollectionViewController {
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(AddNewMeme))
+        
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
@@ -40,6 +43,10 @@ class SentMemesCollectionViewController: UICollectionViewController {
         flowLayout.itemSize = CGSize(width: dimension, height: heightDimension)
     }
 
+    @objc func AddNewMeme(){
+        
+        self.performSegue(withIdentifier: "NewMemeSegue", sender: self)
+    }
     /*
     // MARK: - Navigation
 
@@ -54,19 +61,21 @@ class SentMemesCollectionViewController: UICollectionViewController {
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 0
+        return memes.count
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of items
-        return 0
+        return memes.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
-    
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! MemeCollectionViewCell
+        let meme = self.memes[(indexPath as NSIndexPath).row]
+        
         // Configure the cell
+        cell.memeImageView?.image = UIImage(cgImage: meme.memeImage as! CGImage)
     
         return cell
     }
