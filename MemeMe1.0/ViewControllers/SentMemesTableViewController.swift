@@ -59,24 +59,6 @@ class SentMemesTableViewController: UITableViewController {
         detailViewController?.detailImageView?.image = memes[(indexPath as NSIndexPath).row].memeImage
         navigationController?.pushViewController(detailViewController!, animated: true)
     }
-
-    
-    // MARK: - Navigation
-    /*
-     // In a storyboard-based application, you will often want to do a little preparation before navigation
-     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-         // Get the new view controller using segue.destination.
-         
-         if segue.identifier == "SentMemesDetailsSegue" ,
-            let sentMemesDetailViewController = segue.destination as? SentMemesDetailViewController {
-             sentMemesDetailViewController
-         }
-         // Pass the selected object to the new view controller.
-         
-     }
-     */
-
-
     
 
 }

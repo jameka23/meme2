@@ -86,10 +86,10 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         
         topTextfield.defaultTextAttributes = memeTextAttributes
         topTextfield.textAlignment = .center
-        topTextfield.backgroundColor = UIColor.black
+        //topTextfield.backgroundColor = UIColor.black
         bottomTextfield.defaultTextAttributes = memeTextAttributes
         bottomTextfield.textAlignment = .center
-        bottomTextfield.backgroundColor = UIColor.black
+        //bottomTextfield.backgroundColor = UIColor.black
     }
     
     
@@ -138,6 +138,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
                 self.dismiss(animated: true, completion: nil)
             }else{
                 print("cancelled")
+                self.dismiss(animated: true, completion: nil)
             }
             
             if let shareError = error {
@@ -154,6 +155,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         bottomTextfield.text = "BOTTOM"
         
         imageViewPicker.image = .none
+        dismiss(animated: true, completion: nil)
     }
     
     
