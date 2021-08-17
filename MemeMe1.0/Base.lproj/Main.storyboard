@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="d6x-Rh-c6V">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_1" orientation="landscape" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -32,15 +32,15 @@
             <objects>
                 <tableViewController id="yda-2D-w0u" customClass="SentMemesTableViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="l9L-H7-JQC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MemeCell" rowHeight="157" id="7Az-Wn-l7q">
-                                <rect key="frame" x="0.0" y="24.5" width="414" height="157"/>
+                                <rect key="frame" x="0.0" y="24.5" width="896" height="157"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="7Az-Wn-l7q" id="Cs3-mS-WsN">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="157"/>
+                                    <rect key="frame" x="44" y="0.0" width="808" height="157"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="OkV-VW-1g0">
@@ -51,7 +51,7 @@
                                             </constraints>
                                         </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S3g-9m-Ada">
-                                            <rect key="frame" x="191" y="47" width="184" height="59"/>
+                                            <rect key="frame" x="191" y="47" width="578" height="59"/>
                                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -92,11 +92,11 @@
             <objects>
                 <viewController storyboardIdentifier="SentMemesDetailViewController" id="698-fw-gQZ" customClass="SentMemesDetailViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rvH-TA-4Yr">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vtn-KD-YkD">
-                                <rect key="frame" x="80" y="179" width="254" height="519"/>
+                                <rect key="frame" x="124" y="135" width="648" height="94"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="55O-Y0-0l3"/>
@@ -115,14 +115,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rcl-Xq-hp9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="486.95652173913049" y="-48.214285714285715"/>
+            <point key="canvasLocation" x="225" y="-272"/>
         </scene>
         <!--Sent Memes-->
         <scene sceneID="K2A-xt-TC2">
             <objects>
                 <collectionViewController id="j0C-mt-AA1" customClass="SentMemesCollectionViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="x5n-yq-QG0">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="LTi-90-gCp">
@@ -175,11 +175,11 @@
             <objects>
                 <viewController storyboardIdentifier="MemeEditorViewController" id="3Xt-XO-tff" customClass="MemeEditorViewController" customModule="MemeMe1_0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ljS-gq-tey">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="414"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kMF-Nz-ub3">
-                                <rect key="frame" x="0.0" y="764" width="414" height="49"/>
+                                <rect key="frame" x="44" y="295" width="808" height="49"/>
                                 <items>
                                     <barButtonItem title="Album" id="TmC-vN-xbe">
                                         <connections>
@@ -194,7 +194,7 @@
                                 </items>
                             </toolbar>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WHv-ve-h1H">
-                                <rect key="frame" x="0.0" y="88" width="414" height="44"/>
+                                <rect key="frame" x="44" y="44" width="808" height="44"/>
                                 <items>
                                     <navigationItem title="Meme Me" id="eV4-K9-Qdl" userLabel="Meme Me">
                                         <barButtonItem key="leftBarButtonItem" systemItem="action" id="Qv1-hX-zqA">
@@ -211,15 +211,15 @@
                                 </items>
                             </navigationBar>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="bNY-Uc-cWn">
-                                <rect key="frame" x="0.0" y="132" width="414" height="632"/>
+                                <rect key="frame" x="44" y="88" width="808" height="207"/>
                             </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="BOTTOM" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YAS-Ft-l9C">
-                                <rect key="frame" x="79" y="625" width="256" height="51"/>
+                                <rect key="frame" x="123" y="156" width="650" height="51"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="TOP TOP" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" adjustsFontSizeToFit="NO" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DaS-AV-eMI">
-                                <rect key="frame" x="79" y="182" width="256" height="51"/>
+                                <rect key="frame" x="123" y="138" width="650" height="51"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="34"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="allCharacters"/>
                             </textField>
@@ -263,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8y-po-htL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="487" y="-826"/>
+            <point key="canvasLocation" x="275" y="-1086"/>
         </scene>
         <!--Collection-->
         <scene sceneID="3yx-I7-Cmm">
@@ -272,7 +272,7 @@
                     <tabBarItem key="tabBarItem" title="Collection" image="collection_30x30" id="upm-Cn-5kO"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="CAm-Bb-YMM">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -291,7 +291,7 @@
                     <tabBarItem key="tabBarItem" title="Table" image="table_30x30" id="nT4-cM-F1R"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="did-0h-Ju3">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="896" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
