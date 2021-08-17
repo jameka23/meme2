@@ -56,7 +56,7 @@ class SentMemesTableViewController: UITableViewController {
         let detailController = self.storyboard?.instantiateViewController(identifier: "SentMemesDetailViewController") as! SentMemesDetailViewController
         
         detailController.meme = self.memes[(indexPath as NSIndexPath).row]
-        detailController.detailImageView?.image = self.memes[(indexPath as NSIndexPath).row].memeImage!
+        
         self.navigationController?.pushViewController(detailController, animated: true)
     }
 

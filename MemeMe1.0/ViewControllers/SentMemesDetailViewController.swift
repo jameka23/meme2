@@ -13,4 +13,7 @@ class SentMemesDetailViewController: UIViewController {
     
     @IBOutlet weak var detailImageView: UIImageView!
      
+    override func viewDidLoad() {
+        detailImageView.image = meme.memeImage
+    }
 }
