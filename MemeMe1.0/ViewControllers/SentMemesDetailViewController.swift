@@ -12,12 +12,5 @@ class SentMemesDetailViewController: UIViewController {
     var meme: Meme!
     
     @IBOutlet weak var detailImageView: UIImageView!
-    
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(true)
-        
-        
-    }
      
-
 }

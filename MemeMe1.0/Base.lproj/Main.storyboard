@@ -56,6 +56,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="698-fw-gQZ" kind="show" identifier="SentMemesDetailsSegue" id="Kmj-RT-oZj"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -78,31 +81,32 @@
         <!--Sent Memes Detail View Controller-->
         <scene sceneID="3fm-E6-IGq">
             <objects>
-                <viewController storyboardIdentifier="MemeViewContorller" id="698-fw-gQZ" customClass="SentMemesDetailViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SentMemesDetailViewController" id="698-fw-gQZ" customClass="SentMemesDetailViewController" customModule="MemeMe1_0" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="rvH-TA-4Yr">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vtn-KD-YkD">
-                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <rect key="frame" x="80" y="354" width="254" height="189"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="55O-Y0-0l3"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="vtn-KD-YkD" firstAttribute="top" secondItem="55O-Y0-0l3" secondAttribute="top" constant="340" id="KaZ-ft-OaS"/>
-                            <constraint firstItem="vtn-KD-YkD" firstAttribute="leading" secondItem="55O-Y0-0l3" secondAttribute="leading" constant="87" id="ewh-qr-0eH"/>
-                            <constraint firstItem="55O-Y0-0l3" firstAttribute="bottom" secondItem="vtn-KD-YkD" secondAttribute="bottom" constant="350" id="msE-FY-C8r"/>
-                            <constraint firstItem="55O-Y0-0l3" firstAttribute="trailing" secondItem="vtn-KD-YkD" secondAttribute="trailing" constant="87" id="qJE-Py-09i"/>
+                            <constraint firstItem="vtn-KD-YkD" firstAttribute="leading" secondItem="55O-Y0-0l3" secondAttribute="leading" constant="80" id="1FX-UT-dgI"/>
+                            <constraint firstItem="55O-Y0-0l3" firstAttribute="bottom" secondItem="vtn-KD-YkD" secondAttribute="bottom" constant="270" id="9Uk-bk-T3g"/>
+                            <constraint firstItem="55O-Y0-0l3" firstAttribute="trailing" secondItem="vtn-KD-YkD" secondAttribute="trailing" constant="80" id="QTy-6Z-vDc"/>
+                            <constraint firstItem="vtn-KD-YkD" firstAttribute="top" secondItem="55O-Y0-0l3" secondAttribute="top" constant="266" id="WOF-MV-kJx"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="Ovd-NI-cdu"/>
                     <connections>
                         <outlet property="detailImageView" destination="vtn-KD-YkD" id="e2T-Ie-ybm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Rcl-Xq-hp9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="884.05797101449286" y="10.714285714285714"/>
+            <point key="canvasLocation" x="487" y="-133"/>
         </scene>
         <!--Sent Memes-->
         <scene sceneID="K2A-xt-TC2">
@@ -250,7 +254,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a8y-po-htL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="229" y="-542"/>
+            <point key="canvasLocation" x="487" y="-826"/>
         </scene>
         <!--Collection-->
         <scene sceneID="3yx-I7-Cmm">
