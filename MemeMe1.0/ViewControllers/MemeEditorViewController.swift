@@ -87,9 +87,15 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         topTextfield.defaultTextAttributes = memeTextAttributes
         topTextfield.textAlignment = .center
         //topTextfield.backgroundColor = UIColor.black
+        topTextfield.background = .none
+        topTextfield.adjustsFontSizeToFitWidth = true
+        topTextfield.minimumFontSize = 17.0
         bottomTextfield.defaultTextAttributes = memeTextAttributes
         bottomTextfield.textAlignment = .center
         //bottomTextfield.backgroundColor = UIColor.black
+        bottomTextfield.background = .none
+        bottomTextfield.adjustsFontSizeToFitWidth = true
+        bottomTextfield.minimumFontSize = 17.0
     }
     
     
