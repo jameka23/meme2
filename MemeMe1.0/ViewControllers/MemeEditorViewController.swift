@@ -24,11 +24,12 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
 
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        
+        //if using simulator, album will be the only option otherwise, a physical device will allow for camera use
+        // when picking an image
         cameraButton.isEnabled = UIImagePickerController.isSourceTypeAvailable(.camera)
         
         //disable the upload button
-        uploadButton.isEnabled = false;
+        uploadButton.isEnabled = false
         
         self.view.backgroundColor = UIColor.black
 
@@ -38,6 +39,9 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         setupTextField(textField: bottomTextfield)
         
         subscribeToKeyboardNotifications()
+        
+        //hide the tab bar for better ui
+        tabBarController?.tabBar.isHidden = true
     }
     
     override func viewDidLoad() {
@@ -49,14 +53,26 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
         unsubscribeFromKeyboardNotifications()
+        
+        
+        
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        tabBarController?.tabBar.isHidden = false
+    }
+    
+    func hideShow(_ isHiddenValue:Bool) {
+        toolBar.isHidden = isHiddenValue
+        navBar.isHidden = isHiddenValue
     }
     
     
     //MARK: handle the MemedImage
     func generateMemedImage() -> UIImage {
         // TODO: Hide toolbar and navbar
-        toolBar.isHidden = true
-        navBar.isHidden = true
+        hideShow(true)
         
         // Render view to an image
         UIGraphicsBeginImageContext(self.view.frame.size)
@@ -65,8 +81,8 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
         UIGraphicsEndImageContext()
 
         // TODO: Show toolbar and navbar
-        toolBar.isHidden = false
-        navBar.isHidden = false
+        hideShow(false)
+
         
         return memedImage
     }
@@ -83,19 +99,12 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
             NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-CondensedBlack", size: 30)!,
             NSAttributedString.Key.strokeWidth:  -5.0
         ]
+        textField.defaultTextAttributes = memeTextAttributes
+        textField.textAlignment = .center
+        textField.background = .none
+        textField.adjustsFontSizeToFitWidth = true
+        textField.minimumFontSize = 17.0
         
-        topTextfield.defaultTextAttributes = memeTextAttributes
-        topTextfield.textAlignment = .center
-        //topTextfield.backgroundColor = UIColor.black
-        topTextfield.background = .none
-        topTextfield.adjustsFontSizeToFitWidth = true
-        topTextfield.minimumFontSize = 17.0
-        bottomTextfield.defaultTextAttributes = memeTextAttributes
-        bottomTextfield.textAlignment = .center
-        //bottomTextfield.backgroundColor = UIColor.black
-        bottomTextfield.background = .none
-        bottomTextfield.adjustsFontSizeToFitWidth = true
-        bottomTextfield.minimumFontSize = 17.0
     }
     
     
@@ -203,7 +212,7 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     
     @objc func keyboardWillShow(_ notification:Notification) {
         if bottomTextfield.isFirstResponder{
-            view.frame.origin.y = -300
+            view.frame.origin.y = -getKeyboardHeight(notification)
         }
     }
     
@@ -222,9 +231,6 @@ class MemeEditorViewController: UIViewController, UIImagePickerControllerDelegat
     }
     
     func unsubscribeFromKeyboardNotifications() {
-//         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillShowNotification, object: nil)
-//         
-//         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
         NotificationCenter.default.removeObserver(self)
      }
 

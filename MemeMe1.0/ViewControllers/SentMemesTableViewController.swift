@@ -24,7 +24,7 @@ class SentMemesTableViewController: UITableViewController {
         // self.clearsSelectionOnViewWillAppear = false
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(AddNewMeme))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(title: "Add", style: .plain, target: self, action: #selector(addNewMeme))
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -32,7 +32,7 @@ class SentMemesTableViewController: UITableViewController {
         tableView.reloadData()
     }
     
-    @objc func AddNewMeme(){
+    @objc func addNewMeme(){
         
         self.performSegue(withIdentifier: "NewMemeSegue", sender: self)
     }
